@@ -11,9 +11,9 @@ public:
         vector<string> result;
         map<string, int> subs;
 
-        cout << s.length() - 10 << endl;
+        int n = s.length() - 10;
 
-        for(int i = 0; i < s.length() - 10; i++)
+        for(int i = 0; i <= n; i++)
         {
             string tmp = s.substr(i, 10);
             if(++subs[tmp] == 2)
