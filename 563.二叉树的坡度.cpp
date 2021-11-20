@@ -19,12 +19,20 @@
 class Solution {
 public:
     int findTilt(TreeNode* root) {
-
+        int result = 0;
+        helper(root, result);
+        return result;
     }
 
-    int helper(TreeNode* root, int &sum)
+    int helper(TreeNode* root, int &result)
     {
+        if(root == nullptr)
+            return 0;
         
+        int leftSum = helper(root->left, result);
+        int rightSum = helper(root->right, result);
+        result += abs(leftSum - rightSum);
+        return leftSum + rightSum + root->val;
     }
 };
 // @lc code=end
