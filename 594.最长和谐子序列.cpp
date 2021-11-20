@@ -26,11 +26,8 @@ public:
         while(it != masks.end())
         {
             int x1 = it->first + 1;
-            int x2 = it->first - 1;
             if(masks.find(x1) != masks.end())
                 result = max(result, it->second + masks[x1]);
-            if(masks.find(x2) != masks.end())
-                result = max(result, it->second + masks[x2]);
             it++;
         }
 
