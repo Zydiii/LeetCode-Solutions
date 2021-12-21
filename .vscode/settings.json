@@ -1,6 +1,11 @@
 {
     "files.associations": {
         "xiosbase": "cpp",
-        "xstring": "cpp"
+        "xlocale": "cpp",
+        "initializer_list": "cpp",
+        "type_traits": "cpp",
+        "xstring": "cpp",
+        "xutility": "cpp",
+        "iterator": "cpp"
     }
 }
